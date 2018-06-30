@@ -19,6 +19,7 @@ gem 'webpacker'
 
 gem 'devise'
 gem 'acts_as_votable'
+gem 'record_tag_helper'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

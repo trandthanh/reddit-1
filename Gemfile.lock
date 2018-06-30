@@ -142,6 +142,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
+    record_tag_helper (1.0.0)
+      actionview (~> 5.x)
     redis (4.0.1)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -216,6 +218,7 @@ DEPENDENCIES
   pry-rails
   puma
   rails (= 5.2.0)
+  record_tag_helper
   redis
   sass-rails
   simple_form
