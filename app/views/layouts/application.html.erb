@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>Thanou Suites - Reddit Clone</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -11,22 +11,15 @@
   </head>
   <body>
 
-    <%= render 'shared/alert' %>
+    <%= render 'shared/navbar' %>
 
-    <% if user_signed_in? %>
-      <ul>
-        <li><%= link_to "Submit link", new_link_path %></li>
-        <li><%= link_to "Account", edit_user_registration_path %></li>
-        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
-      </ul>
-    <% else %>
-      <ul>
-        <li><%= link_to "Sign up", new_user_registration_path %></li>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-      </ul>
-    <% end %>
+    <div id="main_content" class="container">
+      <%= render 'shared/alert' %>
+      <div id="content" class="col-md-9 center-block">
+        <%= yield %>
+      </div>
+    </div>
 
-    <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>
