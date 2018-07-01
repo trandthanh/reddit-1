@@ -1,21 +1,35 @@
-  <header class="navbar navbar-default" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to "Raddit", root_path %></div>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">
-          <% if user_signed_in? -%>
-            <ul class="nav navbar-nav navbar-right">
-              <li><%= link_to 'Submit link', new_link_path %></li>
-              <li><%= link_to 'Account', edit_user_registration_path %></li>
-              <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-            </ul>
-          <% else -%>
-            <ul class="nav navbar-nav pull-right">
-              <li><%= link_to 'Sign up', new_user_registration_path %></li>
-              <li><%= link_to 'Sign in', new_user_session_path %></li>
-            </ul>
-          <% end -%>
-        </nav>
-      </div>
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path do %>
+    <%= image_tag ("logo.png"), class: "navbar-wagon-brand" %>
+  <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <% if user_signed_in? %>
+      <%= link_to 'Submit link', new_link_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Account', edit_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: "navbar-wagon-item navbar-wagon-link" %>
+    <% else %>
+      <%= link_to 'Sign up', new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to 'Sign in', new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <% end %>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-wagon-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+        <% if user_signed_in? %>
+          <li><%= link_to 'Submit link', new_link_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+          <li><%= link_to 'Account', edit_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+          <li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <% else %>
+          <li><%= link_to 'Sign up', new_user_registration_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+          <li><%= link_to 'Sign in', new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+        <% end %>
+      </ul>
     </div>
-  </header>
+  </div>
+</div>

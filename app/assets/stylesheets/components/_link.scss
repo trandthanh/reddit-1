@@ -1,0 +1,11 @@
+.link-index-page {
+  h2 {
+    a {
+      color: $thanou-purple;
+      &:hover {
+        color: $thanou-fluo;
+        text-decoration: none;
+      }
+    }
+  }
+}

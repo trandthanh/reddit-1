@@ -1,0 +1,17 @@
+.small-button {
+  background-color: white;
+  padding: 5px;
+  border: 1px solid $thanou-purple;
+  font-size: 13px;
+  color: $thanou-purple;
+  border-radius: 10px;
+  &:hover {
+    color: $thanou-fluo;
+    text-decoration: none;
+    border: 1px solid $thanou-fluo;
+  }
+}
+
+.button-vote {
+  margin-left: 5px;
+}
