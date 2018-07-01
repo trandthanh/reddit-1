@@ -9,3 +9,16 @@
     }
   }
 }
+
+
+.link-show-page {
+  h1 {
+    a {
+      color: $thanou-purple;
+      &:hover {
+        color: $thanou-fluo;
+        text-decoration: none;
+      }
+    }
+  }
+}

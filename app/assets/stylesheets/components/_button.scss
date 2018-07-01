@@ -15,3 +15,16 @@
 .button-vote {
   margin-left: 5px;
 }
+
+.medium-button {
+  background-color: $thanou-purple;
+  padding: 8px;
+  font-size: 18px;
+  color: white;
+  border-radius: 10px;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: $thanou-fluo;
+  }
+}
